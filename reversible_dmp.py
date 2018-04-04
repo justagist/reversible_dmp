@@ -99,12 +99,12 @@ class ReversibleDMP():
     def create_kernel_fcn(self, centers, bfs_width):
         """
             this function creates a basis function. The basis fucntions are gaussians.
-            The guassian is centered at a fixed centered (defined in the constructor)
+            The guassians are centered at fixed centers (defined in the constructor)
             Args:
             centers : centers of the basis functions
             bfs_width : width of a basis function
             Returns:
-            the kernel
+            the handle to the kernel function
         """
     
         def Kernel(q):
