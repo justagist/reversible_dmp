@@ -60,7 +60,7 @@ class ReversibleDMP():
             none, store the trajectories
         """
         if trajectory.shape[1] != self._dof:
-            print trajectory.shape[1], self._dof
+            print((trajectory.shape[1], self._dof))
             raise("The trajectory does not have same number of dimensions as specified")
         self._demo_traj = np.vstack([trajectory, npm.repmat(trajectory[-1,:],20,1)])
         self._traj_data = self.process_trajectory()
@@ -224,7 +224,7 @@ class ReversibleDMP():
         y = config['y0']
         dy = config['dy']
 
-        if not ('ext_force' in  config.keys()):
+        if not ('ext_force' in  list(config.keys())):
             ext_force = np.array([0,0,0,0])
         else:
             ext_force = config['ext_force']

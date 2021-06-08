@@ -1,0 +1,4 @@
+numpy
+scipy
+pygame # only for demo
+matplotlib # only for demo
